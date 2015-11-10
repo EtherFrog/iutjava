@@ -15,16 +15,18 @@ public class ApplicationErrorLog extends AbstractApplicationLog {
 
 
 
-	@Override
-	public IApplicationLogListener[] getpplicationLogListeners() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 	@Override
 	public void addListener(IApplicationLogListener listener) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public IApplicationLogListener[] getpplicationLogListeners() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
