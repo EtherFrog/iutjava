@@ -14,14 +14,14 @@ public abstract class AbstractApplicationLog implements IApplicationLog {
 
 	}
 
-	@Override
+
 	public void AddLogListener(IApplicationLogListener listener){
 
 		listeners.add(listener);
 
 	}
 	
-	@Override
+
 	public ArrayList<IApplicationLogListener> GetListeners(){
 
 		return listeners;
