@@ -45,5 +45,7 @@ Temporary Items
 # Eclipse files
 .metadata
 .recommenders
-RemoteSystemsTempFiles/
+
+#
+
 
