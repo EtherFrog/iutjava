@@ -18,11 +18,11 @@ public class ApplicationSession {
 
 	private static ApplicationSession session = null;
 	private ApplicationSession() {
-		/* Definir US comme locale par défaut */
+		/* Defini US comme locale par défaut */
 		Locale.setDefault(Locale.US);
 		String resourceBunndle="edu.iut.resources.strings";
 		locale = Locale.getDefault();
-		resourceBundle = ResourceBundle.getBundle("edu.iut.resources.strings.res.properties");
+		resourceBundle = ResourceBundle.getBundle("edu.iut.resources.strings.res_fr.properties");
 		sessionGuiLogger = Logger.getLogger("GUI",resourceBunndle);
 		sessionGuiLogger.setLevel(Level.ALL);/* Touls les message doivent être affiché */
 		sessionExceptionLogger = Logger.getLogger("GUIexp");
@@ -47,8 +47,9 @@ public class ApplicationSession {
 	
 	public void setLocale(Locale locale){
 		this.locale = locale;
-		Locale.setDefault(locale.US);
-		resourceBundle= ResourceBundle.getBundle("edu.iut.resources.strings.res_fr.properties");/* récupérer les resources */
+		Locale.setDefault(Locale.US);
+		/* récupère les resources */
+		resourceBundle= ResourceBundle.getBundle("edu.iut.resources.strings.res.properties");
 	}
 	
 	public String getString(String key) {

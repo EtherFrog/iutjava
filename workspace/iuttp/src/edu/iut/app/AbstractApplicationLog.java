@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class AbstractApplicationLog implements IApplicationLog {
 
-	protected String message;
+	public String message;
 
 	protected ArrayList<IApplicationLogListener> listeners;
 
