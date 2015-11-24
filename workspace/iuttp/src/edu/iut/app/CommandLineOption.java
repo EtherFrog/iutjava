@@ -4,6 +4,12 @@ import java.io.File;
 
 public class CommandLineOption<ValueType> {
 	
+	protected String key;
+	protected String description;
+	protected ValueType defaultValue;
+	protected ValueType value;
+	protected OptionType optionType;
+	
 	public enum OptionType{
 		NONE("None"),
 		FILE("File"),
@@ -36,6 +42,10 @@ public class CommandLineOption<ValueType> {
 	}
 	public void setOption(OptionType optionType, String key, String description, ValueType defaultValue) {
 		/* EX1 : Affecter les attributs */
+		this.optionType=optionType;
+		this.key=key;
+		this.description=description;
+		this.defaultValue=defaultValue;
 	}
 	public  void setValue(ValueType value) {
 		this.value = value;
@@ -56,12 +66,5 @@ public class CommandLineOption<ValueType> {
 	public OptionType getOptionType() {
 		return optionType;
 	}
-
-	protected String key;
-	protected String description;
-	protected ValueType defaultValue;
-	protected ValueType value;
-	protected OptionType optionType;
 	
-
 }

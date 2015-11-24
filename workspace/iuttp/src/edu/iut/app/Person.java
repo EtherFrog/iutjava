@@ -2,8 +2,14 @@ package edu.iut.app;
 
 public class Person {
 	
+	protected PersonFunction personFunction;
+	protected String firstname;
+	protected String lastname;
+	protected String email;
+	protected String phone;
+	
 	public enum PersonFunction{
-		/* EX2 : Internationalisation */
+		/* Internationalisation */
 		NONE("None"),
 		JURY("Jury"),
 		STUDENT("Student");
@@ -28,7 +34,11 @@ public class Person {
 				  String lastname,
 				  String email,
 				  String phone) {
-		/* EX2: initialisation */;
+		/* initialisation */
+		this.firstname=firstname;
+		this.lastname=lastname;
+		this.email=email;
+		this.phone=phone;
 	}
 	
 	public void setFunction(PersonFunction function) {
@@ -63,13 +73,5 @@ public class Person {
 	public String getPhone() {
 		return phone;
 	}
-
 	
-	protected PersonFunction personFunction;
-	protected String firstname;
-	protected String lastname;
-	protected String email;
-	protected String phone;
-	
-
 }

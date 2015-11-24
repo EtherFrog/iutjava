@@ -12,7 +12,7 @@ public class ApplicationInfoLogTest {
 	public void setMessageTest()throws Exception {
 		ApplicationInfoLog ai = new ApplicationInfoLog();
 		ai.setMessage("OK");
-		if(ai.message.equals("OK")){
+		if(!ai.message.equals("OK")){
 			fail("setMessage is not working !");
 		}
 	}
