@@ -32,16 +32,15 @@ public class CommandLineOption<ValueType> {
 		/* EX1: Initializer les attributs */
 		 //Variable d'instance
 		ValueType value;
+		
 	}
 	public CommandLineOption(final OptionType optionType, final String key, final String description, final File file) {
-		/* EX1 : Affecter les attributs */
 		this.optionType=optionType;
 		this.key=key;
 		this.description=description;
 		
 	}
 	public void setOption(OptionType optionType, String key, String description, ValueType defaultValue) {
-		/* EX1 : Affecter les attributs */
 		this.optionType=optionType;
 		this.key=key;
 		this.description=description;

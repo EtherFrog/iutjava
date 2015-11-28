@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class ExamEvent {
+	
 	public ExamEvent() {		
 	}
 	
@@ -12,7 +13,6 @@ public class ExamEvent {
 		
 	}
 	
-	/** EX2: FAITE LES ACCESSEURS DES ATTRIBUTS, AJOUTER DES ATTRIBUT ? **/
 	protected Date examDate;
 	protected Person student;
 	protected ArrayList<Person> jury;
