@@ -29,24 +29,27 @@ public class CommandLineOption<ValueType> {
 	}
 	
 	public CommandLineOption() {		
-		/* EX1: Initializer les attributs */
+		/* Initialisation des attributs*/
 		 //Variable d'instance
 		ValueType value;
 		
 	}
 	public CommandLineOption(final OptionType optionType, final String key, final String description, final File file) {
+		/* Initialisation des attributs*/
 		this.optionType=optionType;
 		this.key=key;
 		this.description=description;
 		
 	}
 	public void setOption(OptionType optionType, String key, String description, ValueType defaultValue) {
+		/* Initialisation des attributs*/
 		this.optionType=optionType;
 		this.key=key;
 		this.description=description;
 		this.defaultValue=defaultValue;
 	}
 	public  void setValue(ValueType value) {
+		/* affectation de l'attribut value*/
 		this.value = value;
 	}
 		

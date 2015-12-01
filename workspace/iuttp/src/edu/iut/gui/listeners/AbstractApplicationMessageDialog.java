@@ -7,8 +7,7 @@ public abstract class AbstractApplicationMessageDialog implements
 
 	@Override
 	public void newMessage(String level, String message) {
-	 /* TP1 : CODE A FOURNIR */
-		//vov 
+			showMessage(level,message);
 	}
 	
 	
