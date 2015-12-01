@@ -1,6 +1,7 @@
 package edu.iut.gui.frames;
 
 import java.awt.CardLayout;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -60,11 +61,14 @@ public class SchedulerFrame extends JFrame {
 		// les items du menu file
 		menuItem = new JMenuItem("Load");
 		menu.add(menuItem);
+		MessageDiagInfo(menuItem);
 		menuItem = new JMenuItem("Save");
 		menu.add(menuItem);
+		MessageDiagInfo(menuItem);
 		menu.addSeparator();
 		menuItem = new JMenuItem("Quit");
 		menu.add(menuItem);
+		MessageDiagInfo(menuItem);
 
 		// Le deuxieme menu
 		menu = new JMenu("Edit");
@@ -75,23 +79,50 @@ public class SchedulerFrame extends JFrame {
 		// les sous menu
 		menuItem = new JMenuItem("Month");
 		submenu.add(menuItem);
+		AgendaView(menuItem);
 		menuItem = new JMenuItem("Week");
 		submenu.add(menuItem);
+		AgendaView(menuItem);
 		menuItem = new JMenuItem("Day");
 		submenu.add(menuItem);
 		menu.add(submenu);
 
-		// Le deuxieme menu
+		// Le troisieme menu
 		menu = new JMenu("Help");
 		menuBar.add(menu);
+		MessageDiagInfo(menuItem);
 		menuItem = new JMenuItem("Display");
 		menu.add(menuItem);
+		MessageDiagInfo(menuItem);
 		menuItem = new JMenuItem("About");
 		menu.add(menuItem);
-		
+		MessageDiagInfo(menuItem);
+
 		this.setJMenuBar(menuBar);
 		this.pack();
 		layerLayout.next(contentPane);
+
+	}
+
+	public void MessageDiagInfo(JMenuItem j) {
+		j.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog((Component) e.getSource(),
+						"La fonctionalité n'est pas encore implémenter");
+			}
+		});
+	}
+
+	public void AgendaView(JMenuItem j) {
+		j.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				layerLayout.next(dayView);
+			}
+
+		});
+		j.add(menuBar);
 	}
 
 	public SchedulerFrame() {
