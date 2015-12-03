@@ -17,18 +17,25 @@ import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 import javax.swing.KeyStroke;
 
+import edu.iut.gui.listeners.AbstractApplicationMessageDialog;
+import edu.iut.gui.listeners.ApplicationInfoMessageDialog;
 import edu.iut.gui.listeners.ApplicationItem;
 import edu.iut.gui.widget.agenda.AgendaPanelFactory;
 import edu.iut.gui.widget.agenda.ControlAgendaViewPanel;
 import edu.iut.gui.widget.agenda.AgendaPanelFactory.ActiveView;
 
+/**
+ * 
+ * 
+ *
+ */
 public class SchedulerFrame extends JFrame {
 	JPanel contentPane;
 	CardLayout layerLayout;
 	AgendaPanelFactory agendaPanelFactory;
-	public JPanel dayView;
-	public JPanel weekView;
-	public JPanel monthView;
+	public static JPanel dayView;
+	public static JPanel weekView;
+	public static JPanel monthView;
 	// item du menu File
 	public static JMenuItem load, save, quit;
 	// item du menu View qui est le sous-menu du menu Edit
@@ -39,6 +46,7 @@ public class SchedulerFrame extends JFrame {
 	/**
 	 * génère le menu et ainsi que son positionement dans la fenetre
 	 */
+
 	protected void setupUI() {
 
 		contentPane = new JPanel();
@@ -59,11 +67,12 @@ public class SchedulerFrame extends JFrame {
 				agendaViewPanel, contentPane);
 		this.setContentPane(splitPane);
 
-		// declaration des menus
+		// Declaration de la barre de menus
 		JMenuBar menuBar = new JMenuBar();
 		JMenu menu, submenu;
 
-		/* File Menu */
+			/* File Menu */
+		
 		// Le premier menu
 		menu = new JMenu("File");
 		menuBar.add(menu);
@@ -81,17 +90,26 @@ public class SchedulerFrame extends JFrame {
 		quit = new JMenuItem("Quit");
 		menu.add(quit);
 		MessageDiagInfo(quit);
-		/* Edit Menu */
+		/*IApplicationLogListener.newMessage("0",
+				"La fonctionalité n'est pas encore implémenter");
+		msgInfo.showMessage("0",
+				"La fonctionalité n'est pas encore implémenter");
+		quit.addActionListener(msgInfo);
+		 */
+			/* Edit Menu */
+		
 		// Le deuxieme menu
 		menu = new JMenu("Edit");
 		menuBar.add(menu);
-
 		// les items du menu Edit
 		submenu = new JMenu("View");
 		// les sous menu
+		// Creation de l'item Month
 		month = new JMenuItem("Month");
 		submenu.add(month);
+		// Evenement de l'item Day
 		month.addActionListener(new ApplicationItem());
+		// Creation de l'item Week
 		week = new JMenuItem("Week");
 		submenu.add(week);
 		// Evenement de l'item Week
@@ -99,11 +117,13 @@ public class SchedulerFrame extends JFrame {
 		// Creation de l'item Day
 		day = new JMenuItem("Day");
 		submenu.add(day);
+		// Evenement de l'item Day
 		day.addActionListener(new ApplicationItem());
 		// Ajout du sous-menu au menu Edit
 		menu.add(submenu);
 
-		/* Help Menu */
+			/* Help Menu */
+		
 		// Le troisieme menu
 		menu = new JMenu("Help");
 		menuBar.add(menu);
@@ -163,6 +183,7 @@ public class SchedulerFrame extends JFrame {
 	 * 
 	 * @param title
 	 */
+
 	public SchedulerFrame(String title) {
 		super(title);
 		addWindowListener(new WindowAdapter() {

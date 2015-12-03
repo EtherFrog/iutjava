@@ -6,19 +6,19 @@ import java.io.File;
 
 import edu.iut.app.CommandLineOption.OptionType;
 
-public class CommandLineParser<OptionType> {
+public class CommandLineParser {
 
-	protected HashMap<String, CommandLineOption<OptionType>> options;
+	protected HashMap<String, CommandLineOption> options;
 	protected ArrayList<String> parseErrors;
 
 	public CommandLineParser() {
-		options = new HashMap<String, CommandLineOption<OptionType>>();
+		options = new HashMap<String, CommandLineOption >();
 		parseErrors = new ArrayList<String>();
 	}
 
 	public void addOption(CommandLineOption<?> option) {
 		if (option != null) {
-			options.put(option.getKey(), (CommandLineOption<OptionType>) option);
+			options.put(option.getKey(), (CommandLineOption<?>) option);
 		}
 	}
 

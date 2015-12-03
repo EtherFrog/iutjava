@@ -5,34 +5,27 @@ import java.awt.event.ActionListener;
 
 import edu.iut.gui.frames.SchedulerFrame;
 
-/**
- * Classe qui permet d'ecouter et de lancer les evenements de chaque item
- *
- */
+//Classe qui permet d'ecouter et de lancer les evenements de chaque item
+ 
 public class ApplicationItem implements ActionListener {
-	SchedulerFrame sf = new SchedulerFrame();
-
+	@Override
 	public void actionPerformed(ActionEvent evt) {
-		
-		switch (evt.getActionCommand()) {
-		case "Month":
-			sf.monthView.setVisible(true);
-			sf.weekView.setVisible(false);
-			sf.dayView.setVisible(false);
-
-			break;
-
-		case "Week":
-			sf.weekView.setVisible(true);
-			sf.dayView.setVisible(false);
-			sf.monthView.setVisible(false);
-
-			break;
-
-		case "Day":
-			sf.dayView.setVisible(true);
-			sf.monthView.setVisible(false);
-			sf.weekView.setVisible(false);
+		// TODO Auto-generated method stub
+		if(evt.getSource()== SchedulerFrame.month) {
+			SchedulerFrame.monthView.setVisible(true);
+			SchedulerFrame.weekView.setVisible(false);
+			SchedulerFrame.dayView.setVisible(false);
+		}
+		if(evt.getSource()== SchedulerFrame.week) {
+			SchedulerFrame.weekView.setVisible(true);
+			SchedulerFrame.dayView.setVisible(false);
+			SchedulerFrame.monthView.setVisible(false);
+		}
+		if(evt.getSource()== SchedulerFrame.day) {
+			SchedulerFrame.dayView.setVisible(true);
+			SchedulerFrame.monthView.setVisible(false);
+			SchedulerFrame.weekView.setVisible(false);
 		}
 	}
+	
 }

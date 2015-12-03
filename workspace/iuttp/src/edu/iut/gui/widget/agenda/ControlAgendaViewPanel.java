@@ -21,18 +21,32 @@ public class ControlAgendaViewPanel extends JPanel {
 	int selectedYear;
 	int selectedMonth;
 	int selectedDay;
+	/**
+	 * Accesseur pour recuperer l'attribut selectedYear
+	 * @return selectedYear
+	 */
 	public int getSelectedYear() {
 		return selectedYear;
 	}
-
+	/**
+	 * Accesseur pour recuperer l'attribut selectedMonth
+	 * @return selectedMonth
+	 */
 	public int getSelectedMonth() {
 		return selectedMonth;
 	}
-
+	/**
+	 * Accesseur pour recuperer l'attribut selectedDay
+	 * @return
+	 */
 	public int getSelectedDay() {
 		return selectedDay;
 	}
-	
+	/**
+	 * Constructeur de la classe ControlAgendaViewPanel
+	 * @param layerLayout
+	 * @param contentPane
+	 */
 	public ControlAgendaViewPanel(CardLayout layerLayout, final JPanel contentPane) {
 		this.agendaViewLayout = layerLayout;
 		this.contentPane = contentPane;
