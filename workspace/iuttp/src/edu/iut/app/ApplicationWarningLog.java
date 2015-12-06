@@ -2,7 +2,7 @@ package edu.iut.app;
 
 public class ApplicationWarningLog extends AbstractApplicationLog {
 
-	/** Ajouter un tableau ou profiter de l'héritage ? */
+	/** Ajouter un tableau ou profiter de l'heritage ? */
 	public ApplicationWarningLog() {
 		super();
 	}
@@ -26,7 +26,7 @@ public class ApplicationWarningLog extends AbstractApplicationLog {
 	}
 
 	@Override
-	public IApplicationLogListener[] getpplicationLogListeners() {
+	public IApplicationLogListener[] getApplicationLogListeners() {
 		// TODO Auto-generated method stub
 		return null;
 	}

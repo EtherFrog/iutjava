@@ -1,7 +1,8 @@
 package edu.iut.app;
-
-import java.io.File;
-
+/**
+ * Classe generic sur le type ValueType
+ * @param <ValueType>
+ */
 public class CommandLineOption<ValueType> {
 	
 	protected String key;
@@ -27,7 +28,10 @@ public class CommandLineOption<ValueType> {
 			return optionType;
 		}		
 	}
-	
+	/**
+	 * Constructeur sans parametre de la classe CommandeLineOption
+	 * Permet l'initialisation des attributs de la classe
+	 */
 	public CommandLineOption() {
 		/* Initialisation des attributs*/
 		optionType = OptionType.NONE;
@@ -37,7 +41,14 @@ public class CommandLineOption<ValueType> {
 		value = null;
 			
 	}
-	
+	/**
+	 * Constructeur avec parametres de la classe CommandeLineOption
+	 * Permet l'initialisation et l'affectation des variables donner en parametre 
+	 * @param optionType
+	 * @param key
+	 * @param description
+	 * @param defaultValue
+	 */
 	public CommandLineOption(final OptionType optionType, final String key, final String description, final ValueType defaultValue) {
 		/* Affectation des attributs*/
 		this.optionType=optionType;
@@ -46,7 +57,7 @@ public class CommandLineOption<ValueType> {
 		this.defaultValue=defaultValue;
 	}
 	/**
-	 * Procdure qui initialise les attributs en effectuant des affectations
+	 * Procedure qui initialise les attributs en effectuant des affectations
 	 * @param optionType
 	 * @param key
 	 * @param description
@@ -59,6 +70,10 @@ public class CommandLineOption<ValueType> {
 		this.description=description;
 		this.defaultValue=defaultValue;
 	}
+	/**
+	 * Accesseur qui permet d'affecter une nouvelle valeur a value qui est de type ValueType
+	 * @param value
+	 */
 	public  void setValue(ValueType value) {
 		/* affectation de l'attribut value*/
 		this.value = value;

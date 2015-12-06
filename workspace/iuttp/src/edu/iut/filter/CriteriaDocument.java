@@ -1,4 +1,4 @@
-package edu.iut.filtre;
+package edu.iut.filter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import edu.iut.app.Document;
 import edu.iut.app.ExamEvent;
 
-public class CritereDocument implements Critere<Document>{
+public class CriteriaDocument implements Criteria<Document>{
 
 	@Override
 	public List<ExamEvent> meetCriteria(List<ExamEvent> exams, Document type) {

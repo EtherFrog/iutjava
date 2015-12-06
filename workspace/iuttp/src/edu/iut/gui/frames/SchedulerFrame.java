@@ -160,7 +160,9 @@ public class SchedulerFrame extends JFrame {
 			layerLayout.next(contentPane);
 		}
 	}
-
+	/**
+	 * Constructeur de la fenetre de l'application
+	 */
 	public SchedulerFrame() {
 		super();
 

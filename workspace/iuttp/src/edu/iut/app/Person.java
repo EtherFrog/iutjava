@@ -9,7 +9,7 @@ public class Person {
 	protected String phone;
 	
 	public enum PersonFunction{
-		
+		/*Internationalisation*/
 		NONE("None"),
 		JURY("Jury"),
 		STUDENT("Student");
@@ -34,7 +34,7 @@ public class Person {
 				  String lastname,
 				  String email,
 				  String phone) {
-		/* initialisation */
+		/* Initialisation */
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;

@@ -26,7 +26,7 @@ public class ApplicationInfoLog extends AbstractApplicationLog {
 	}
 
 	@Override
-	public IApplicationLogListener[] getpplicationLogListeners() {
+	public IApplicationLogListener[] getApplicationLogListeners() {
 		// TODO Auto-generated method stub
 		return null;
 	}

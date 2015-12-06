@@ -5,7 +5,6 @@ public class ApplicationErrorLog extends AbstractApplicationLog {
 	public ApplicationErrorLog() {
 		super();
 	}
-	
 	@Override
 	public void setMessage(String message) {
 		this.message = message;
@@ -20,7 +19,7 @@ public class ApplicationErrorLog extends AbstractApplicationLog {
 	}
 
 	@Override
-	public IApplicationLogListener[] getpplicationLogListeners() {
+	public IApplicationLogListener[] getApplicationLogListeners() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -4,15 +4,13 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.io.File;
 
-import edu.iut.app.CommandLineOption.OptionType;
-
 public class CommandLineParser {
 
-	protected HashMap<String, CommandLineOption> options;
+	protected HashMap<String, CommandLineOption<?>> options;
 	protected ArrayList<String> parseErrors;
 
 	public CommandLineParser() {
-		options = new HashMap<String, CommandLineOption >();
+		options = new HashMap<String, CommandLineOption<?>>();
 		parseErrors = new ArrayList<String>();
 	}
 
@@ -67,6 +65,10 @@ public class CommandLineParser {
 						parseErrors
 								.add("Option should have a key and a value.");
 					}
+					break;
+				case NOVALUE:
+					CommandLineOption<?> noValueOption = (CommandLineOption<?>) options
+							.get(keyValue[0]);
 					break;
 				default:
 					parseErrors.add("Unrecognize option type.");

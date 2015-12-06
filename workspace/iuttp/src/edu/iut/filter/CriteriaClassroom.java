@@ -1,11 +1,14 @@
-package edu.iut.filtre;
+package edu.iut.filter;
 
 import java.util.ArrayList;
 import java.util.List;
 import edu.iut.app.Classroom;
 import edu.iut.app.ExamEvent;
-
-public class CritereSalle implements Critere<Classroom> {
+/**
+ * Classe pour filtrer un examen
+ *@see ExamEvent
+ */
+public class CriteriaClassroom implements Criteria<Classroom> {
 
 	@Override
 	public List<ExamEvent> meetCriteria(List<ExamEvent> exams, Classroom salle) {
